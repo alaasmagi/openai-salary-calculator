@@ -83,17 +83,17 @@ public class SalaryResultModel
 }
 ```
   
-### UI
-* UI is implemented using ASP.NET MVC default pages
+### User Interface
+* UI is implemented using ASP.NET MVC default pages (Views)
 * Bootstrap is used for quick customisation
 
 ## Improvements & scaling possibilities
 
 ### Taxation
-* Some kind of tax office API could be used to get the most updated taxation data.
+* Some kind of tax office API could be used to get the most updated taxation data
 
 ### More AI models as options
-* As OpenAI develops more and more different AI models, they could be added in this openai-enhancer-app as options.
+* As OpenAI develops more and more different AI models, they could be added in this openai-enhancer-app as options
 
 ### Mobile Application
-* Separate mobile application could be made with React Native or Flutter to make UX better on mobile interfaces.
+* Separate mobile application could be made with React Native or Flutter to make UX better on mobile interfaces
