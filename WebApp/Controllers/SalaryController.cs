@@ -27,7 +27,7 @@ public class SalaryController : Controller
         {
             result.AiComment = await _aiService.GetSalaryComment(result.NetSalary);
         }
-        catch (Exception ex)
+        catch
         {
             result.AiComment = "AI hinnangut ei õnnestunud hetkel saada.";
         }

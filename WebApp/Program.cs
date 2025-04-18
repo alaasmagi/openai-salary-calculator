@@ -9,7 +9,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<OpenAiService>();
 builder.Services.AddSingleton<SalaryCalculatorService>();
 builder.Services.AddSingleton<CalculatorConfig>();
-Console.WriteLine("ENV API key: " + Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
 
 var app = builder.Build();
 
