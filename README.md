@@ -37,6 +37,7 @@ After meeting all prerequisites above -
 ```bash
 dotnet run
 ```
+* user interface can be viewed from the web browser on the address the application provided in the terminal/cmd
 
 ## Features
 * Users can calculate their salary based on different input types (e.g., gross salary, net salary, or employer's cost)
