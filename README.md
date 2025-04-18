@@ -33,9 +33,8 @@ The idea behind this complicated .env file is that if government decides to chan
 ### Running the app
 
 After meeting all prerequisites above - 
-* application can be run via terminal/cmd opened in the root of the project by commands
+* application can be run via terminal/cmd opened in the root of WebApp folder `/WebApp` by command
 ```bash
-cd WebApp
 dotnet run
 ```
 
