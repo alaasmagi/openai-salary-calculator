@@ -13,7 +13,7 @@
 * .NET SDK 9.0
 * Modern web browser
 
-The application should have .env file in the root of WebApp folder (/WebApp) and it shoult have following content:
+The application should have .env file in the root of WebApp folder `/WebApp` and it shoult have following content:
 ```bash
 OPENAI_API_KEY=<your-openai-api-key>
 
@@ -33,7 +33,7 @@ The idea behind this complicated .env file is that if government decides to chan
 ### Running the app
 
 After meeting all prerequisites above - 
-* application can be run via terminal/cmd opened in WebApp folder (/WebApp) folder by command
+* application can be run via terminal/cmd opened in WebApp folder `/WebApp` folder by command
 ```bash
 dotnet run
 ```
