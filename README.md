@@ -58,7 +58,7 @@ And configuration helper service:
 * CalculatorConfig - service that gets all necessary data from .env file for SalaryCalculatorService
 
 ### Models
-
+Models are used to transfer data between the user interface and business logic.  
 * **SalaryInputModel**
 ```csharp
 public class SalaryInputModel
