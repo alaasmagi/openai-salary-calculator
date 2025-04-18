@@ -3,11 +3,11 @@
 ## 1. Mis on vahe Task ja Thread-il C#-is ning millal võiks ühte või teist kasutada?
 
 Tegelikult on ka kolmas variant olemas, mis on sünkroonne.  
-**Sünkroonne** meetod kasutab põhilõime `lõim on protsessori osa [inglese keeles thread]`, et teostada mingit toimingut või protsessi. Seda kasutatakse siis, kui on kindlalt vaja teha mingid protsessid järjest ja järjekord on oluline. Sünkroonne meetod ei lase enne ühelgi teisel protsessil alata, kuni eelnev protsess on läbi saanud. 
+* **Sünkroonne** meetod kasutab põhilõime `lõim on protsessori osa [inglese keeles thread]`, et teostada mingit toimingut või protsessi. Seda kasutatakse siis, kui on kindlalt vaja teha mingid protsessid järjest ja järjekord on oluline. Sünkroonne meetod ei lase enne ühelgi teisel protsessil alata, kuni eelnev protsess on läbi saanud. 
 
-**Task** on asünkroonne meetod. Task kasutab samamoodi põhilõime, kuid erinevalt sünkroonsest meetodist ei oota see tegevuse lõpetamist, et alustada järgmist protsessi. Task sobib näiteks serveritesse, kus on palju kasutajaid, kes teevad päringuid, mille täitmine võtab natuke rohkem aega (nt. andmebaasipäringud). Serverit ei hoita seega kinni, kuni üks kasutaja saab oma andmed andmebaasist kätte.
+* **Task** on asünkroonne meetod. Task kasutab samamoodi põhilõime, kuid erinevalt sünkroonsest meetodist ei oota see tegevuse lõpetamist, et alustada järgmist protsessi. Task sobib näiteks serveritesse, kus on palju kasutajaid, kes teevad päringuid, mille täitmine võtab natuke rohkem aega (nt. andmebaasipäringud). Serverit ei hoita seega kinni, kuni üks kasutaja saab oma andmed andmebaasist kätte.
 
-**Thread** on kolmas võimalus, mis kasutab hoopis mingit muud lõime kui põhilõim. Kasutatakse seda reeglina siis, kui on vaja jooksutada mingit protsessi, mis nõuab rohkem protsessori töömahtu ja eraldi mälu.
+* **Thread** on kolmas võimalus, mis kasutab hoopis mingit muud lõime kui põhilõim. Kasutatakse seda reeglina siis, kui on vaja jooksutada mingit protsessi, mis nõuab rohkem protsessori töömahtu ja eraldi mälu.
 
 ## 2. Mis vahe on dependency injection (DI) transient, scoped ja singleton elutsüklitel ASP.NET Core’is?
 
@@ -23,12 +23,12 @@ Vahe on elueas. **Transient** tähendab seda, et igakord, kui mingi teenuse pool
 
 ## 5. Kuidas sa teeksid asünkroonse OpenAI API päringu .NET-is, kasutades HttpClient-i?
 
-Samm 1: Initsialiseeri **HTTPClient**  
-Samm 2: Võta keskkonnamuutujate hulgast **API võti**  
-Samm 3: Määra attribuudid (prompt, API päringu attribuudid)  
-Samm 4: Sisesta **API võti** päringu **header**-isse  
-Samm 5: Teosta päring  
-Samm 6: Vastavalt päringu tulemusele määra edasine meetodi käitumine/väljund
+* Samm 1: Initsialiseeri **HTTPClient**  
+* Samm 2: Võta keskkonnamuutujate hulgast **API võti**  
+* Samm 3: Määra attribuudid (prompt, API päringu attribuudid)  
+* Samm 4: Sisesta **API võti** päringu **header**-isse  
+* Samm 5: Teosta päring  
+* Samm 6: Vastavalt päringu tulemusele määra edasine meetodi käitumine/väljund
 
 ### Väljavõte mu proovitööst:
 
