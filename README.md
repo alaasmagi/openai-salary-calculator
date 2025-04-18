@@ -67,7 +67,7 @@ public class SalaryInputModel
     public decimal? GrossSalary { get; set; }
     public decimal? EmployerCost { get; set; }
 
-    public int PensionPercent { get; set; } = 2;
+    public int PensionPercent { get; set; } = 2;     // Mandatory in Estonia
     public bool IncludeUnemploymentInsurance { get; set; } = true;
     public bool UseTaxFreeIncome { get; set; } = true;
 }
