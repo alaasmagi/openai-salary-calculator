@@ -5,7 +5,7 @@
 * UI language: Estonian
 * Development year: **2025**
 * Languages and technologies: **C#, .NET Core, ASP.NET MVC**
-* Integratrion with (OpenAI API)[https://platform.openai.com/docs/overview]
+* Integratrion with [OpenAI API](https://platform.openai.com/docs/overview)
 
 ## How to run
 
