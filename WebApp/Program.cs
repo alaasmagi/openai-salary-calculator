@@ -1,13 +1,15 @@
 using DotNetEnv;
 using WebApp.Services;
 
+Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-Env.Load();
-var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
 builder.Services.AddSingleton<OpenAiService>();
+builder.Services.AddSingleton<SalaryCalculatorService>();
+builder.Services.AddSingleton<CalculatorConfig>();
+Console.WriteLine("ENV API key: " + Environment.GetEnvironmentVariable("OPENAI_API_KEY"));
 
 var app = builder.Build();
 

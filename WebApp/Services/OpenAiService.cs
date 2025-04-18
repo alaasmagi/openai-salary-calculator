@@ -4,16 +4,11 @@ using System.Text.Json;
 
 namespace WebApp.Services;
 
-public class OpenAiService
+public class OpenAiService(IConfiguration configuration)
 {
-    private readonly HttpClient _httpClient;
-    private readonly string _apiKey;
-
-    public OpenAiService(IConfiguration configuration)
-    {
-        _httpClient = new HttpClient();
-        _apiKey = configuration["OpenAI:ApiKey"] ?? throw new Exception("OpenAI API Key is missing");
-    }
+    private readonly HttpClient _httpClient = new();
+    private readonly string _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") 
+                                      ?? throw new Exception("OpenAI API Key is missing");
 
     public async Task<string> GetSalaryComment(decimal netSalary)
     {

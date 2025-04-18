@@ -1,8 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Palgakalkulaator";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model SalaryResultModel
+<div class="col-md-3"></div>
+<div class="container col-md-6">
+    <div class="d-flex justify-content-center mb-5">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <h4 class="mt-4">Tulemused:</h4>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <ul class="list-unstyled">
+                <li><strong>Netopalk:</strong> @Model.NetSalary €</li>
+                <li><strong>Brutopalk:</strong> @Model.GrossSalary €</li>
+                <li><strong>Tööandja kulu:</strong> @Model.EmployerCost €</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4 class="mt-4">AI hinnang:</h4>
+    <div class="alert alert-info mt-3" role="alert">
+        @Model.AiComment
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-primary mt-3 px-5" asp-controller="Salary" asp-action="Index"><b>Järgmine arvutus</b></a>
+    </div>
 </div>
+<div class="col-md-3"></div>
