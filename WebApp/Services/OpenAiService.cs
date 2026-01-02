@@ -7,11 +7,14 @@ namespace WebApp.Services;
 public class OpenAiService(IConfiguration configuration)
 {
     private readonly HttpClient _httpClient = new();
-    private readonly string _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") 
-                                      ?? throw new Exception("OpenAI API Key is missing");
 
-    public async Task<string> GetSalaryComment(decimal netSalary)
+    public async Task<string> GetSalaryComment(string? openAiApiKey, decimal netSalary)
     {
+        if (string.IsNullOrEmpty(openAiApiKey))
+        {
+            return "Tekkis tõrge. OpenAI API võti puudub.";
+        }
+        
         var prompt = $"Kirjuta mulle lühike hinnang sellele palgale Eestis: {netSalary} eurot netopalka kuus.";
 
         var requestData = new
@@ -27,7 +30,7 @@ public class OpenAiService(IConfiguration configuration)
         var requestJson = JsonSerializer.Serialize(requestData);
         var request = new HttpRequestMessage(HttpMethod.Post, "https://api.openai.com/v1/chat/completions");
 
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", openAiApiKey);
         request.Content = new StringContent(requestJson, Encoding.UTF8, "application/json");
 
         var response = await _httpClient.SendAsync(request);

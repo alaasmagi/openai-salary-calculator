@@ -9,4 +9,6 @@ public class SalaryInputModel
     public int PensionPercent { get; set; } = 2;
     public bool IncludeUnemploymentInsurance { get; set; } = true;
     public bool UseTaxFreeIncome { get; set; } = true;
+    
+    public string? OpenAiApiKey { get; set; }
 }

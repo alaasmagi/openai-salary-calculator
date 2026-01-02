@@ -11,13 +11,18 @@
     </div>
     <form method="post">
         <div class="mb-3">
-            <input class="form-check-input" type="radio" name="SalaryInputType" id="radioNet" value="net" checked onchange="toggleInputs()" />
+            <label for="OpenAiApiKey" class="form-label">OpenAI API võti</label>
+            <input asp-for="OpenAiApiKey" class="form-control" placeholder="Jäta tühjaks, kui ei soovi AI hinnangut" id="OpenAiApiKey"/>
+        </div>
+        
+        <div class="mb-3">
+            <input class="form-check-input" type="radio" name="SalaryInputType" id="radioNet" value="net" checked onchange="toggleInputs()"/>
             <label for="radioNet" class="form-label">Netopalk</label>
             <input asp-for="NetSalary" class="form-control" id="NetSalary"/>
         </div>
 
         <div class="mb-3">
-            <input class="form-check-input" type="radio" name="SalaryInputType" id="radioGross" value="gross" onchange="toggleInputs()" />
+            <input class="form-check-input" type="radio" name="SalaryInputType" id="radioGross" value="gross" onchange="toggleInputs()"/>
             <label for="radioGross" class="form-label">Brutopalk</label>
             <input asp-for="GrossSalary" class="form-control" id="GrossSalary"/>
         </div>
@@ -38,12 +43,12 @@
         </div>
 
         <div class="mb-3 form-check">
-            <input type="checkbox" asp-for="UseTaxFreeIncome" class="form-check-input" id="UseTaxFreeIncomeTax" />
+            <input type="checkbox" asp-for="UseTaxFreeIncome" class="form-check-input" id="UseTaxFreeIncomeTax"/>
             <label class="form-check-label" for="UseTaxFreeIncomeTax">Arvesta tulumaksuvaba miinimumi</label>
         </div>
 
         <div class="mb-3 form-check">
-            <input type="checkbox" asp-for="IncludeUnemploymentInsurance" class="form-check-input" id="IncludeUnemploymentInsurance" />
+            <input type="checkbox" asp-for="IncludeUnemploymentInsurance" class="form-check-input" id="IncludeUnemploymentInsurance"/>
             <label class="form-check-label" for="IncludeUnemploymentInsurance">Arvesta töötuskindlustust</label>
         </div>
 

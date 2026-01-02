@@ -25,7 +25,7 @@ public class SalaryController : Controller
         
         try
         {
-            result.AiComment = await _aiService.GetSalaryComment(result.NetSalary);
+            result.AiComment = await _aiService.GetSalaryComment(input.OpenAiApiKey, result.NetSalary);
         }
         catch
         {
